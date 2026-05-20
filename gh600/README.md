@@ -25,12 +25,12 @@ The control plane distinction matters. This is not a generic agentic AI exam. It
 
 | # | Domain | Weight | Core focus |
 |---|--------|--------|-----------|
-| 1 | [Agent Architecture & SDLC Processes](./domain-breakdowns/D1-agent-sdlc.md) | 15–20% | Copilot agent setup, SDLC integration, architecture decisions |
-| 2 | [Tool Use & Environment Interaction](./domain-breakdowns/D2-tool-environment.md) | 20–25% | MCP servers, tool configuration, permissions, environment scoping |
-| 3 | [Memory, State & Execution](./domain-breakdowns/D3-memory-state.md) | 10–15% | State persistence, session management, execution environments |
-| 4 | [Evaluation, Error Analysis & Tuning](./domain-breakdowns/D4-evaluation.md) | 15–20% | Agent output evaluation, error diagnosis, iterative improvement |
-| 5 | [Multi-Agent Coordination](./domain-breakdowns/D5-multi-agent.md) | 15–20% | Orchestration, delegation, parallel execution, GitHub as coordinator |
-| 6 | [Guardrails & Accountability](./domain-breakdowns/D6-guardrails.md) | 10–15% | Human-in-the-loop, audit trails, access controls, safety scans |
+| 1 | [Agent Architecture & SDLC Processes](./domains/D1-agent-sdlc.md) | 15–20% | Copilot agent setup, SDLC integration, architecture decisions |
+| 2 | [Tool Use & Environment Interaction](./domains/D2-tool-environment.md) | 20–25% | MCP servers, tool configuration, permissions, environment scoping |
+| 3 | [Memory, State & Execution](./domains/D3-D6-domains.md) | 10–15% | State persistence, session management, execution environments |
+| 4 | [Evaluation, Error Analysis & Tuning](./domains/D3-D6-domains.md) | 15–20% | Agent output evaluation, error diagnosis, iterative improvement |
+| 5 | [Multi-Agent Coordination](./domains/D3-D6-domains.md) | 15–20% | Orchestration, delegation, parallel execution, GitHub as coordinator |
+| 6 | [Guardrails & Accountability](./domains/D3-D6-domains.md) | 10–15% | Human-in-the-loop, audit trails, access controls, safety scans |
 
 > **D2 + D1 + D4 + D5 = 65–85% of the exam.** D2 is the single heaviest domain.
 

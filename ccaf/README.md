@@ -22,11 +22,11 @@
 
 | # | Domain | Weight | Where people lose marks |
 |---|--------|--------|------------------------|
-| 1 | [Agent Architecture & Orchestration](./domain-breakdowns/D1-agent-architecture.md) | **27%** | Anti-patterns, coordinator logic, subagent context isolation |
-| 2 | [Claude Code Configuration & Workflows](./domain-breakdowns/D2-claude-code.md) | **20%** | CLAUDE.md hierarchy, `-p` flag, skill isolation |
-| 3 | [Prompt Engineering & Structured Output](./domain-breakdowns/D3-prompt-engineering.md) | **20%** | Schema limits, few-shot construction, retry logic |
-| 4 | [Tool Design & MCP Integration](./domain-breakdowns/D4-tool-mcp.md) | **18%** | Tool descriptions, structured errors, config scoping |
-| 5 | [Context Management & Reliability](./domain-breakdowns/D5-context-reliability.md) | **15%** | Summarisation traps, lost-in-middle, escalation triggers |
+| 1 | [Agent Architecture & Orchestration](./domains/D1-agent-architecture.md) | **27%** | Anti-patterns, coordinator logic, subagent context isolation |
+| 2 | [Claude Code Configuration & Workflows](./domains/D2-claude-code.md) | **20%** | CLAUDE.md hierarchy, `-p` flag, skill isolation |
+| 3 | [Prompt Engineering & Structured Output](./domains/D3-prompt-engineering.md) | **20%** | Schema limits, few-shot construction, retry logic |
+| 4 | [Tool Design & MCP Integration](./domains/D4-tool-mcp.md) | **18%** | Tool descriptions, structured errors, config scoping |
+| 5 | [Context Management & Reliability](./domains/D5-context-reliability.md) | **15%** | Summarisation traps, lost-in-middle, escalation triggers |
 
 > **D1 + D2 + D3 = 67% of the exam.**
 
@@ -73,7 +73,7 @@ CCA-F/
 
 **Have 4 weeks:** Follow the [4-week study schedule](./resources/Study-Schedule.md).
 
-**Have 1 week:** [Quick Reference Card](./study-guides/Quick-Reference-Card.md) + [Anti-Patterns Index](./study-guides/Anti-Patterns-Index.md) + all practice questions.
+**Have 1 week:** [Quick Reference Card](./guides/Quick-Reference-Card.md) + [Anti-Patterns Index](./guides/Anti-Patterns-Index.md) + all practice questions.
 
 **Have 1 day:** Quick Reference Card + Anti-Patterns Index. Know the traps.
 
@@ -94,7 +94,7 @@ Every question puts you inside a production system that has already broken. Iden
 
 ## Cross-certification reference
 
-Studying GH-600 alongside CCA-F? See [`certifications/GH-600/resources/CCA-F-Crosswalk.md`](../GH-600/resources/CCA-F-Crosswalk.md) for the full concept mapping between both exams.
+Studying GH-600 alongside CCA-F? See [`gh600/resources/CCA-F-Crosswalk.md`](../gh600/resources/CCA-F-Crosswalk.md) for the full concept mapping between both exams.
 
 ---
 

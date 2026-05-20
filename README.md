@@ -14,8 +14,8 @@
 
 | Certification | Issuer | Exam | Status | Domain focus |
 |---|---|---|---|---|
-| [Claude Certified Architect – Foundations](./certifications/CCA-F/) | Anthropic | CCA-F | Live · March 2026 | Claude API, Claude Code, MCP |
-| [GitHub Certified: Agentic AI Developer](./certifications/GH-600/) | GitHub / Microsoft | GH-600 | Beta · May 2026 | GitHub Copilot, SDLC, Copilot agents |
+| [Claude Certified Architect – Foundations](./ccaf/) | Anthropic | CCA-F | Live · March 2026 | Claude API, Claude Code, MCP |
+| [GitHub Certified: Agentic AI Developer](./gh600/) | GitHub / Microsoft | GH-600 | Beta · May 2026 | GitHub Copilot, SDLC, Copilot agents |
 
 ---
 
