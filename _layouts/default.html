@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}Agentic AI Certification Hub</title>
+  <style>
+    :root {
+      --bg:      #0f0c09;
+      --bg2:     #181410;
+      --bg3:     #231c13;
+      --bg4:     #2d2418;
+      --border:  #3a2e1e;
+      --text:    #ede3d0;
+      --text2:   #a8967e;
+      --text3:   #6b5a45;
+      --accent:  #d4813a;
+      --accent2: #e8964a;
+      --green:   #78b878;
+      --red:     #e07060;
+      --blue:    #6aa8d4;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent2); text-decoration: underline; }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 12, 9, 0.96);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .nav-brand:hover { color: var(--accent2); text-decoration: none; }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 12.5px;
+      color: var(--text2);
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+      text-decoration: none;
+    }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+
+    .nav-links .nav-sep {
+      width: 1px;
+      height: 16px;
+      background: var(--border);
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 3.5rem 2rem 6rem;
+    }
+
+    /* ── MARKDOWN CONTENT ── */
+    .md-body h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .md-body h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .md-body h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-top: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .md-body h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text2);
+      margin-top: 1.25rem;
+      margin-bottom: 0.4rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .md-body p {
+      color: var(--text2);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .md-body strong { color: var(--text); font-weight: 700; }
+    .md-body em { color: var(--text2); font-style: italic; }
+
+    .md-body ul,
+    .md-body ol {
+      color: var(--text2);
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .md-body li {
+      margin-bottom: 0.3rem;
+      line-height: 1.75;
+    }
+
+    .md-body li > ul,
+    .md-body li > ol {
+      margin-top: 0.3rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .md-body hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    /* CODE */
+    .md-body code {
+      font-family: 'Cascadia Code', 'Fira Code', Consolas, 'Courier New', monospace;
+      font-size: 0.84em;
+      background: var(--bg3);
+      color: var(--accent2);
+      padding: 2px 6px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+    }
+
+    .md-body pre {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+      overflow-x: auto;
+      margin: 1.25rem 0;
+    }
+
+    .md-body pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 13px;
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    /* BLOCKQUOTE */
+    .md-body blockquote {
+      border-left: 3px solid rgba(212,129,58,0.45);
+      margin: 1.25rem 0;
+      padding: 0.75rem 1.25rem;
+      background: var(--bg2);
+    }
+
+    .md-body blockquote p {
+      color: var(--text2);
+      font-style: italic;
+      margin: 0;
+    }
+
+    /* TABLES */
+    .md-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+      overflow-x: auto;
+      display: block;
+    }
+
+    .md-body thead tr {
+      background: var(--bg3);
+      border-bottom: 2px solid var(--border);
+    }
+
+    .md-body th {
+      text-align: left;
+      padding: 0.6rem 0.9rem;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text3);
+      white-space: nowrap;
+    }
+
+    .md-body td {
+      padding: 0.6rem 0.9rem;
+      color: var(--text2);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    .md-body tr:hover td {
+      background: var(--bg2);
+    }
+
+    /* LINKS in content */
+    .md-body a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(212,129,58,0.3);
+    }
+    .md-body a:hover {
+      color: var(--accent2);
+      border-color: var(--accent2);
+      text-decoration: none;
+    }
+
+    /* ANCHOR LINKS from anchor.js */
+    .md-body .anchorjs-link { color: var(--text3) !important; }
+
+    /* ── CERT BADGE PILLS ── */
+    .cert-pills {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin: 1rem 0 2rem;
+    }
+
+    .cert-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      border-radius: 2px;
+      border: 1px solid rgba(212,129,58,0.4);
+      color: var(--accent);
+      background: rgba(212,129,58,0.08);
+      font-family: 'Cascadia Code', 'Fira Code', Consolas, monospace;
+    }
+
+    .cert-pill.complete {
+      border-color: rgba(120,184,120,0.4);
+      color: var(--green);
+      background: rgba(120,184,120,0.08);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      margin-top: 5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    footer p {
+      font-size: 12.5px;
+      color: var(--text3);
+    }
+
+    footer a {
+      color: var(--text3);
+      border-bottom: 1px solid var(--border);
+      font-size: 12.5px;
+    }
+    footer a:hover { color: var(--text2); border-color: var(--text2); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .page-wrap { padding: 2rem 1.25rem 4rem; }
+      footer { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ── SYNTAX HIGHLIGHTING (Rouge) ── */
+    .highlight .c  { color: #6b5a45; font-style: italic }
+    .highlight .k  { color: var(--accent); font-weight: bold }
+    .highlight .s  { color: var(--green) }
+    .highlight .s2 { color: var(--green) }
+    .highlight .mi { color: var(--blue) }
+    .highlight .nf { color: var(--accent2) }
+    .highlight .nb { color: var(--blue) }
+    .highlight .bp { color: var(--blue) }
+    .highlight .o  { color: var(--text2) }
+    .highlight .p  { color: var(--text2) }
+    .highlight .n  { color: var(--text) }
+    .highlight .na { color: var(--accent2) }
+    .highlight .nx { color: var(--text) }
+    .highlight .kd { color: var(--accent); font-weight: bold }
+    .highlight .kn { color: var(--accent); font-weight: bold }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="{{ '/index.html' | relative_url }}" class="nav-brand">agentic-cert</a>
+    <ul class="nav-links">
+      <li><a href="{{ '/ccaf/' | relative_url }}">CCA-F</a></li>
+      <li><a href="{{ '/gh600/' | relative_url }}">GH-600</a></li>
+      <li><a href="{{ '/core/' | relative_url }}">Core</a></li>
+      <li class="nav-sep"></li>
+      <li><a href="https://zencloudau.github.io/learn-with-claude/" target="_blank" rel="noopener">Journal</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-wrap">
+  <div class="md-body">
+    {{ content }}
+  </div>
+
+  <footer>
+    <p>Phil Myint &middot; ZenCloud Global Consultants &middot; Brisbane &middot; 2026</p>
+    <a href="https://zencloudau.github.io/learn-with-claude/" target="_blank" rel="noopener">learn-with-claude &rarr;</a>
+  </footer>
+</div>
+
+</body>
+</html>
