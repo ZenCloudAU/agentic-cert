@@ -3,10 +3,26 @@
 
 ---
 
-> One repo. Shared foundations. Platform-specific branches.
-> The architectural concepts are the same across every agentic AI certification.
-> The implementation surface and exam vocabulary differ by platform.
-> Study the core once. Apply it everywhere.
+Agentic AI Certification Hub is a structured learning and reference repository for agentic AI concepts, Claude, GitHub, architecture foundations, practice questions, and cross-certification study.
+
+## Purpose
+
+This repo exists to separate durable agentic AI architecture concepts from vendor-specific exam vocabulary. The core material covers foundations such as orchestration, context, tools, memory, guardrails, and evaluation. The certification folders then apply those foundations to specific platforms and exam surfaces.
+
+## Who It Is For
+
+- Architecture practitioners preparing for agentic AI certifications.
+- Enterprise and solution architects who need a practical grounding in agentic AI systems.
+- Builders using Claude, GitHub Copilot, MCP, and AI-assisted delivery workflows.
+- StudioSix and Velocity Architecture practitioners who need a learning layer for agentic architecture concepts.
+
+## Ecosystem Fit
+
+This repository supports the Velocity Architecture / StudioSix ecosystem by strengthening the AI-assisted delivery learning layer. It is not the core framework and it is not a product repo; it is a study and reference hub that helps practitioners understand the concepts behind agentic architecture work.
+
+## Current Status
+
+Usable study repository. Current content covers Claude Certified Architect foundations and GitHub agentic AI certification preparation, with shared cross-certification foundations in `core/`.
 
 ---
 
